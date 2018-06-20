@@ -24,3 +24,18 @@ gitlab-runner exec docker [task_name] \
 - `--docker-pull-policy=never`: Use local image instead of pulling from remote.
 - `--docker-volumes=/var/run/docker.sock:/var/run/docker.sock`: Bind socket to build Docker images within CI container. For more options, see [GitLab's documentation](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html).
 - `--env [value] ...`: Pass env variables to CI container.
+> **Note:**
+> If a variable in `.gitlab-ci.yml` has the same name as env variable like below,
+> ```yml
+> # .gitlab-ci.yml
+> variables:
+>   SSH_PRIVATE_KEY: ${SSH_PRIVATE_KEY}
+> ```
+> ```bash
+> # bash
+> gitlab-runner exec docker ... --env SSH_PRIVATE_KEY="$(cat ~/.ssh/id_rsa)"
+> ```
+> **GitLab Runner can not pass the value of env variable** appropriately.
+> So, you may need to **temporarily remove the variable from `.gitlab-ci.yml`**
+> or **use the different variable names**.
+> *This will occur only when using GitLab Runner (not GitLab CI)*.
