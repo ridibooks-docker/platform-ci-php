@@ -44,7 +44,7 @@ RUN pecl config-set preferred_state beta \
 && pecl config-set preferred_state stable
 
 # Install node
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 && apt-get install nodejs -y
 
 # Install bower
