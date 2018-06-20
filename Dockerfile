@@ -3,7 +3,7 @@ FROM ${BASE_IMAGE}
 MAINTAINER Kang Ki Tae <kt.kang@ridi.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV DOCKERVERSION=17.12.0-ce
+ENV DOCKERVERSION=18.03.1-ce
 
 # Install common
 RUN docker-php-source extract \
