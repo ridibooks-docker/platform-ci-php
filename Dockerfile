@@ -3,7 +3,7 @@ FROM ${BASE_IMAGE}
 MAINTAINER Kang Ki Tae <kt.kang@ridi.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV DOCKERVERSION=18.03.1-ce
+ENV DOCKER_VERSION=18.03.1-ce
 
 # Install common
 RUN docker-php-source extract \
@@ -23,8 +23,8 @@ RUN docker-php-source extract \
 && docker-php-ext-install ldap zip mysqli pdo pdo_mysql
 
 # Install Docker cli
-RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
-&& mv docker-${DOCKERVERSION}.tgz docker.tgz \
+RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz \
+&& mv docker-${DOCKER_VERSION}.tgz docker.tgz \
 && tar xzvf docker.tgz \
 && mv docker/docker /usr/local/bin \
 && rm -r docker docker.tgz
