@@ -1,6 +1,5 @@
 ARG BASE_IMAGE=php:7.0
 FROM ${BASE_IMAGE}
-MAINTAINER Kang Ki Tae <kt.kang@ridi.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DOCKER_VERSION=18.03.1-ce
