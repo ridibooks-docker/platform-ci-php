@@ -1,5 +1,6 @@
 # Base Docker Image for CI
 
+[![Build Status](https://travis-ci.org/ridibooks-docker/platform-php-ci.svg?branch=master)](https://travis-ci.org/ridibooks-docker/platform-php-ci)
 [![](https://images.microbadger.com/badges/version/ridibooks/platform-php-ci.svg)](http://microbadger.com/images/ridibooks/platform-php-ci "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/ridibooks/platform-php-ci.svg)](http://microbadger.com/images/ridibooks/platform-php-ci "Get your own version badge on microbadger.com")
 
