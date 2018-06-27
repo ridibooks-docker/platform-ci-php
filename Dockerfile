@@ -3,6 +3,7 @@ FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DOCKER_VERSION=18.03.1-ce
+ENV DOCKER_COMPOSE_VERSION=1.21.2
 
 # Install common
 RUN docker-php-source extract \
@@ -32,6 +33,10 @@ RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${
 && tar xzvf docker.tgz \
 && mv docker/docker /usr/local/bin \
 && rm -r docker docker.tgz
+
+# Install Docker Compose
+RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose \
+&& chmod +x /usr/local/bin/docker-compose
 
 # Install AWS cli
 RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
