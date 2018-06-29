@@ -1,8 +1,15 @@
 # Base Docker Image for CI
 
+[![](https://images.microbadger.com/badges/version/ridibooks/platform-php-ci:7.2.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.2 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/ridibooks/platform-php-ci:7.2.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.2 "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/ridibooks/platform-php-ci:7.1.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.1 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/ridibooks/platform-php-ci:7.1.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.1 "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/ridibooks/platform-php-ci:7.0.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.0 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/ridibooks/platform-php-ci:7.0.svg)](https://microbadger.com/images/ridibooks/platform-php-ci:7.0 "Get your own image badge on microbadger.com")
+
 [![Build Status](https://travis-ci.org/ridibooks-docker/platform-php-ci.svg?branch=master)](https://travis-ci.org/ridibooks-docker/platform-php-ci)
-[![](https://images.microbadger.com/badges/version/ridibooks/platform-php-ci.svg)](http://microbadger.com/images/ridibooks/platform-php-ci "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/ridibooks/platform-php-ci.svg)](http://microbadger.com/images/ridibooks/platform-php-ci "Get your own version badge on microbadger.com")
 
 ## Using on Local Machine with GitLab Runner
 1. Build the image:
