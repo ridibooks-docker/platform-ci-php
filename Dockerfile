@@ -14,7 +14,7 @@ RUN docker-php-source extract \
   jq \
   libldap2-dev \
   libmcrypt-dev \
-  mysql-client \
+  mariadb-client \
   openssh-client \
   software-properties-common \
   wget \
