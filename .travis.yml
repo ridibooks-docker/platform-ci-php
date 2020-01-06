@@ -6,9 +6,8 @@ services:
   - docker
 
 env:
-  - PHP_VERSION=7.0
-  - PHP_VERSION=7.1
   - PHP_VERSION=7.2
+  - PHP_VERSION=7.3
 
 script: bin/build.sh
 
