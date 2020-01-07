@@ -20,6 +20,7 @@ RUN docker-php-source extract \
   wget \
   zlib1g-dev \
   libzip-dev \
+  python-distutils \
 && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
 && docker-php-ext-install \
   ldap \
