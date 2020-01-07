@@ -5,6 +5,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DOCKER_VERSION=18.03.1-ce
 ENV DOCKER_COMPOSE_VERSION=1.21.2
 
+RUN rm -rfv /var/lib/apt/lists/* \
+&& sed -i "s/http:\/\/deb.debian.org/http:\/\/ftp.daumkakao.com/" /etc/apt/sources.list \
+&& sed -i "s/http:\/\/security.debian.org/http:\/\/ftp.daumkakao.com/" /etc/apt/sources.list
+
 # Install common
 RUN docker-php-source extract \
 && apt-get update \
@@ -45,7 +49,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
 && pip install awscli --upgrade
 
 # Install mysql
-RUN apt-get install mysql-server -y \
+RUN apt-get install mariadb-server -y \
 && sed -i 's/127\.0\.0\.1/0\.0\.0\.0/g' /etc/mysql/my.cnf \
 && sed -i '/max_connections/a max_connections = 3000' /etc/mysql/my.cnf
 
