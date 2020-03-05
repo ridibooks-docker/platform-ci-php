@@ -25,13 +25,15 @@ RUN docker-php-source extract \
   zlib1g-dev \
   libzip-dev \
   python3-setuptools \
+  libgmp-dev \
 && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
 && docker-php-ext-install \
   ldap \
   mysqli \
   pdo \
   pdo_mysql \
-  zip
+  zip \
+  gmp
 
 # Install Docker cli
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz \
