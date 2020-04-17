@@ -6,8 +6,8 @@ ENV DOCKER_VERSION=18.03.1-ce
 ENV DOCKER_COMPOSE_VERSION=1.21.2
 
 RUN rm -rfv /var/lib/apt/lists/* \
-&& sed -i "s/http:\/\/deb.debian.org/http:\/\/ftp.daumkakao.com/" /etc/apt/sources.list \
-&& sed -i "s/http:\/\/security.debian.org/http:\/\/ftp.daumkakao.com/" /etc/apt/sources.list
+&& sed -i "s/http:\/\/deb.debian.org/http:\/\/cloudfront.debian.net/" /etc/apt/sources.list \
+&& sed -i "s/http:\/\/security.debian.org/http:\/\/cloudfront.debian.net/" /etc/apt/sources.list
 
 # Install common
 RUN docker-php-source extract \
